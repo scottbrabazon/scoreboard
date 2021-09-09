@@ -1,0 +1,258 @@
+/* ELEMENT STYLES -------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  background: #000; 
+  /*font-family: arial;*/
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+}
+
+header {
+  color: #dfc33f;
+  padding: 5px 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  border-bottom: solid 2px #000;
+}
+
+header h1 {
+  flex-grow: 1;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+/* FORMS */
+form {
+  display: flex;
+  background-color: #000;
+}
+
+input[type=text] {
+  flex-grow: 1;
+  border-width: 0 0 1px 0;
+  margin: 15px 10px 15px 15px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333;
+  border-style: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 2px;
+  outline: none;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+}
+
+input[type=text]::-webkit-input-placeholder{
+  color: #dfc33f;
+  letter-spacing: 2px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.5rem;
+}
+
+input[type=text]:focus{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+input[type=submit] {
+  display: block;
+  font-size: .5em;
+  margin: 15px 15px 15px 0; 
+  padding: 10px;
+  background-color: #dfc33f;
+  border: none;
+  color: #000;
+  letter-spacing: 2px;
+  text-shadow: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
+
+button, 
+input[type=submit] {
+  outline: none;
+  transition: background-color 0.2s ease,
+              color 0.2s ease;
+}
+
+/* ICONS */
+svg {
+  width: 28px;
+  height: 19px;
+  margin-right: 5px;
+  fill: #F0F0F0;
+}
+
+.is-high-score {
+  fill: #FFC657;
+  animation: grow 0.35s ease-in-out;
+  transform-origin: 50% 50%;
+}
+
+@keyframes grow {
+  50% { transform: scale(1.4) rotate(-3deg); }
+}
+
+/* COMPONENT STYLES -------------------- */
+.scoreboard {
+  background: #fff;
+  width: 750px;
+  margin: 70px auto;
+  overflow: hidden;
+  border: 1px solid #fff;
+}
+
+.player {
+  display: flex;
+  font-size: 1em;
+  border-bottom: solid 2px #000;
+  letter-spacing: 2px;
+  background-color: #333;
+}
+
+  .player:last-of-type {
+    border-bottom-color: #000;
+  }
+
+  .player-name:hover .remove-player {
+    visibility: visible;
+  }
+
+  .player-name,
+  .counter-score {
+    color: #dfc33f;
+  }
+
+  .player-name {
+    flex-grow: 1;
+    line-height: 3.5em;
+    padding-left: 10px;
+  }
+
+  .remove-player {
+    font-size: 1.15em;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    color: #dfc33f;
+    cursor: pointer;
+    margin: 0 10px 0 0;
+    padding: 0;
+    background: none;
+  }
+
+.stats {
+  width: 200px;
+}
+
+.stopwatch {
+  width: 170px;
+}
+
+.stats {
+  display: flex;
+  margin: 0 0 0 20px;
+  font-weight: normal;
+}
+
+  .stats td:first-child {
+    text-align: right;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: .5em;
+  }
+
+  .stats td:last-child {
+    text-align: left;
+  }
+
+  .stats tr {
+    height: 1.5rem;
+  }
+
+.stopwatch {
+  padding: 15px 10px 5px 10px;
+  margin: -5px -10px -5px 10px;
+  background: #000;
+}
+
+  .stopwatch-time {
+    display: block;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.1em;
+  }
+
+  .stopwatch button {
+    margin: 8px 5px;
+    background-color: #dfc33f;
+    padding: 7px 8px;
+    border: none;
+    color: #000;
+    letter-spacing: 2px;
+    text-shadow: none;
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.5em;
+  }
+
+  .stopwatch button:hover,
+  input[type=submit]:hover {
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .stopwatch h2 {
+    font-size: .5em;
+    margin: 0;
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
+
+.counter {
+  display: flex;
+  width: 190px;
+}
+
+  .counter-action {
+    border: none;
+    font-size: 1.15em;
+    font-weight: bold;
+    color: #000;
+    background-color: #dfc33f;
+    display: block;
+    padding: 20px 20px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .counter-action:hover {
+    color: #fff;
+  }
+
+  .increment:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  .decrement:hover {
+    background: #fff;
+    color: #000;
+  }
+
+  .counter-score {
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1em;
+    line-height: 1em;
+    align-self: center;
+  }
